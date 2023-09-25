@@ -1,0 +1,54 @@
+<!-- 21BAI1225 - Swarab Raul -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Time and Date Display</title>
+</head>
+
+<body>
+
+    <a href="../index.html">Back To Main Page</a>
+
+    <h1>Time and Date Display</h1>
+    <button id="showTimeButton">Show Time</button>
+    <button id="showDateButton">Show Date</button>
+    <p id="output"></p>
+
+    <script>
+        function showTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true,
+                timeZoneName: 'short',
+            };
+            const formattedTime = now.toLocaleDateString('en-US', options);
+            document.getElementById('output').textContent = formattedTime;
+        }
+
+        function showDate() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            document.getElementById('output').textContent = formattedDate;
+        }
+
+        document.getElementById('showTimeButton').addEventListener('click', showTime);
+        document.getElementById('showDateButton').addEventListener('click', showDate);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.navbar-top {
+    background-color: #FFD700;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-top .navbar-brand {
+    color: #00205B;
+    font-size: 24px;
+}
+
+.navbar-top .navbar-nav .nav-link {
+    color: #00205B;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+}
+
+.navbar-top .nav-link i {
+    color: #00205B;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.navbar-top .navbar-nav .nav-link:hover {
+    color: #FFD700;
+    background-color: transparent;
+}
+
+.navbar-main {
+    background-color: #00205B;
+}
+
+.navbar-main .navbar-toggler-icon {
+    background-color: #FFD700;
+}
+
+.navbar-main .navbar-toggler {
+    border: none;
+}
+
+.navbar-main .navbar-brand,
+.navbar-main .nav-link {
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.navbar-main .btn-primary {
+    background-color: #FFD700;
+    border: none;
+    color: #00205B;
+    font-weight: bold;
+}
+
+.get-quote-button {
+    background-color: #00205B;
+    border: none;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.custom-card {
+    background-color: #00205B;
+    color: #FFD700;
+    border: none;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.custom-card i {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.custom-card .card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.custom-card .card-text {
+    font-size: 16px;
+}
+
+.carousel-caption {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #00205B;
+    color: #FFD700;
+    padding: 20px 0;
+}
+
+.footer p {
+    text-align: center;
+}

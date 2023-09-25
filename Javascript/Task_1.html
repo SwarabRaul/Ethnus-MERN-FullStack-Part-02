@@ -1,0 +1,37 @@
+<!-- 21BAI1225 - Swarab Raul -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Reversal</title>
+</head>
+
+<body>
+
+    <a href="../index.html">Back To Main Page</a>
+
+    <h1>Number Reversal</h1>
+    <p>Enter a number to reverse:</p>
+    <input type="number" id="inputNumber">
+    <button onclick="reverseNumber()">Reverse</button>
+    <p>Reversed Number: <span id="reversedNumber"></span></p>
+
+    <script>
+        function reverseNumber() {
+            const inputElement = document.getElementById("inputNumber");
+            const inputNumber = parseInt(inputElement.value);
+
+            if (!isNaN(inputNumber)) {
+                const reversedNumber = parseInt(inputNumber.toString().split("").reverse().join(""));
+
+                const reversedNumberElement = document.getElementById("reversedNumber");
+                reversedNumberElement.textContent = reversedNumber;
+            } else {
+                alert("Please enter a valid number.");
+            }
+        }
+    </script>
+</body>
+
+</html>

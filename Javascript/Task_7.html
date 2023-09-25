@@ -1,0 +1,92 @@
+<!-- 21BAI1225 - Swarab Raul -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Train Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0077b3;
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        #trainVideo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            background-color: #0077b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #00568e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../index.html">Back To Main Page</a>
+
+    <h1>Train Animation</h1>
+    <div id="container">
+        <video id="trainVideo" src="./train.mp4" autoplay loop muted></video>
+    </div>
+    <div class="button-container">
+        <button class="button" id="startButton" onclick="startAnimation()">Start Animation</button>
+        <button class="button" id="stopButton" onclick="stopAnimation()">Stop Animation</button>
+    </div>
+
+    <script>
+        let trainVideo = document.getElementById("trainVideo");
+        let isPlaying = true;
+
+        function startAnimation() {
+            if (!isPlaying) {
+                trainVideo.play();
+                isPlaying = true;
+            }
+        }
+
+        function stopAnimation() {
+            if (isPlaying) {
+                trainVideo.pause();
+                isPlaying = false;
+            }
+        }
+    </script>
+</body>
+
+</html>

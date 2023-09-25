@@ -1,0 +1,178 @@
+<!-- 21BAI1225 - Swarab Raul -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            color: #405de6;
+            margin-bottom: 20px;
+        }
+
+        .logo i {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            padding-left: 30px;
+            transition: border-color 0.3s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #405de6;
+        }
+
+        .login-button {
+            background-color: #405de6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .login-button:hover {
+            background-color: #3844d8;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .forgot-password {
+            text-decoration: none;
+            color: #0073b1;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .forgot-password:hover {
+            color: #005190;
+        }
+
+        .new-account {
+            margin-top: 20px;
+        }
+
+        .new-account a {
+            color: #405de6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .new-account a:hover {
+            color: #3844d8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="../index.html">Back To Main Page</a>
+
+    <div class="container">
+        <div class="logo">
+            <i class="fab fa-instagram"></i> Instagram
+        </div>
+        <div class="input-container">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" id="username" placeholder="(Username: Admin)">
+        </div>
+        <div class="input-container">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="password" placeholder="(Password: Admin)">
+        </div>
+        <button class="login-button" onclick="performLogin()">Log In</button>
+        <p id="loginMessage"></p>
+        <div class="remember-forgot">
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <a class="forgot-password" href="#">Forgot Password?</a>
+        </div>
+        <p class="new-account">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+
+    <script>
+        function performLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "Admin" && password === "Admin") {
+                displayLoginSuccess();
+            } else {
+                displayLoginError();
+            }
+        }
+
+        function displayLoginSuccess() {
+            const loginMessage = document.getElementById("loginMessage");
+            loginMessage.style.color = "green";
+            loginMessage.textContent = "Login successful!";
+        }
+
+        function displayLoginError() {
+            const loginMessage = document.getElementById("loginMessage");
+            loginMessage.style.color = "red";
+            loginMessage.textContent = "Login failed. Please check your username and password.";
+        }
+    </script>
+</body>
+
+</html>
